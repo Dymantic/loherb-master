@@ -56,7 +56,7 @@
             <a class="font-sans text-white mx-6 uppercase no-underline hover:text-gold" href="">{{ trans('homepage.nav.estate') }}</a>
         </div>
     </footer>
-<nav class="absolute pin-t w-full h-24 flex justify-center items-start z-40 main-nav font-sans pt-3">
+<nav class="absolute pin-t w-full h-12 flex justify-center items-center z-40 main-nav font-sans bg-black-opq">
     <a class="no-underline text-base md:text-lg tracking-wide text-white uppercase ml-4 md:ml-6 pr-4 md:pr-6 border-r border-w" href="">{{ trans('homepage.nav.villa') }}</a>
     <a class="no-underline text-base md:text-lg tracking-wide text-white uppercase ml-4 md:ml-6 pr-4 md:pr-6 border-r border-w" href="">{{ trans('homepage.nav.cuisine') }}</a>
     <a class="no-underline text-base md:text-lg tracking-wide text-white uppercase ml-4 md:ml-6 pr-4 md:pr-6 border-r border-w md:border-0" href="">{{ trans('homepage.nav.estate') }}</a>

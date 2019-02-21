@@ -62,6 +62,7 @@ let colors = {
     'warning': '#cc1f1a',
 
     'black': '#1b1c1b',
+    'black-opq': 'rgba(0,0,0,.8)',
     'grey-darkest': '#3d4852',
     'grey-darker': '#606f7b',
     'grey-dark': '#8795a1',
