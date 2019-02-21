@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "transat-bold";
+  src: url(../fonts/transat_bold-webfont.woff), url(../fonts/transat_bold-webfont.woff2);
+  font-style: normal;
+  font-weight: bold;
+}
+
+@tailwind preflight;
+
+.banner {
+  height: calc(100vh - 10rem);
+  background-color: #0f2f21;
+
+  @media screen and (max-width: 576px) {
+    height: calc(100vh - 4rem);
+  }
+}
+
+.villa::before, .cuisine::before, .estate::before{
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 1px;
+  padding-bottom: 100%;
+}
+
+.villa {
+  background-image: url(../images/villa_banner.jpg);
+  background-size: cover;
+  transition: .3s;
+}
+
+.cuisine {
+  background-image: url(../images/cuisine_banner.jpg);
+  background-size: cover;
+  transition: .3s;
+}
+
+.estate {
+  background-image: url(../images/estate_banner.jpg);
+  background-size: cover;
+  transition: .3s;
+}
+
+.sites:hover a {
+  opacity: .75;
+}
+
+.sites a.villa:hover {
+  opacity: 1;
+}
+
+.sites a.cuisine:hover {
+  opacity: 1;
+}
+
+.sites a.estate:hover {
+  opacity: 1;
+}
+
+.main-nav {
+  background-image: linear-gradient(180deg, rgba(0,0,0,.8), rgba(0,0,0,.8) 3rem, transparent 3.5rem);
+}
+
+.banner .banner-controls {
+  transition: .3s;
+  transform: translateY(100px);
+}
+
+.banner.ready .banner-controls {
+  transform: translateY(0);
+}
+
+.banner svg, .banner h1 {
+  transition: 1s;
+}
+
+.banner.active svg, .banner.active h1 {
+  opacity: 0;
+}
+
+.main-nav:lang(zh) > a {
+  @media screen and (max-width: 576px) {
+    font-size: 80%;
+  }
+}
+
+@tailwind utilities;
