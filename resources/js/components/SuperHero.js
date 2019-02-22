@@ -5,22 +5,31 @@ export class SuperHero {
         this.current = 0;
         this.interval = null;
         this.showPosition = document.querySelector('.banner .count');
-        try {
-            const sources = JSON.parse(this.initial_image.getAttribute('data-alternates'));
-            this.slides = [];
-            sources.forEach(source => {
-                const slide = this.makeSlide(source);
-                this.banner.insertBefore(slide, this.initial_image);
-                this.slides.push(slide);
-            })
 
-        } catch(e) {
-            console.log('failed to init banner slider');
-        }
+    }
 
-        Promise.all(this.slides.map(slide => this.loadImage(slide, slide.getAttribute('data-src'))))
-               .then(() => window.setTimeout(() => this.begin(), 10))
-               .catch(() => console.log('failed'));
+    init() {
+        return new Promise((resolve, reject) => {
+            try {
+                const sources = JSON.parse(this.initial_image.getAttribute('data-alternates'));
+                this.slides = [];
+                sources.forEach(source => {
+                    const slide = this.makeSlide(source);
+                    this.banner.insertBefore(slide, this.initial_image);
+                    this.slides.push(slide);
+                })
+
+            } catch(e) {
+                reject();
+            }
+
+            Promise.all(this.slides.map(slide => this.loadImage(slide, slide.getAttribute('data-src'))))
+                   .then(() => {
+                       this.begin();
+                       resolve();
+                   })
+                   .catch(reject);
+        });
     }
 
     makeSlide(source) {
