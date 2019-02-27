@@ -58,7 +58,13 @@
   opacity: 1;
 }
 
+.body-font {
+  @apply .font-serif;
+}
 
+.body-font:lang(zh) {
+  @apply .font-sans .font-thin;
+}
 
 .banner .banner-controls {
   transition: .3s;
