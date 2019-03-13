@@ -2,7 +2,7 @@
 
 @section('head')
     @include('ogmeta', [
-        'ogImage' => '',
+        'ogImage' => url('/images/main_facebook.jpg'),
         'ogTitle' => trans('homepage.meta.title'),
         'ogDescription' => trans('homepage.meta.description')
     ])
@@ -77,7 +77,7 @@
   "@type": "Corporation",
   "name": "Loherb Group",
   "url": "https://loherb.com.tw/",
-  "logo": "https://loherb.com.tw/images/logo.png",
+  "logo": "https://loherb.com.tw/images/logos/logo_main.svg",
   "description": "The Loherb Group is a premium lifestyle brand. Our group includes Loherb Villa, luxury hotel accommodation in Yilan, and Loherb Cuisine, which offers a fine dining experience.",
   "address": {
 		"@type": "PostalAddress",
