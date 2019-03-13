@@ -1,5 +1,13 @@
 @extends('base')
 
+@section('head')
+    @include('ogmeta', [
+        'ogImage' => '',
+        'ogTitle' => trans('homepage.meta.title'),
+        'ogDescription' => trans('homepage.meta.description')
+    ])
+@endsection
+
 @section('content')
 <section class="banner relative px-8 flex flex-col justify-center items-center font-sans relative">
     <div class="stage absolute pin">
@@ -23,13 +31,13 @@
     </section>
     <section>
         <div class="flex flex-col md:flex-row sites">
-            <a href="" class="flex justify-center items-center flex-1 mx-2 md:m-2 villa">
+            <a href="https://villa.loherb.com.tw" class="flex justify-center items-center flex-1 mx-2 md:m-2 villa">
                 @include('svgs.logos.sites.logo_villa', ['classes' => 'h-40'])
             </a>
-            <a href="" class="flex justify-center items-center flex-1 m-2 md:mx-0 cuisine">
+            <a href="https://cuisine.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-0 cuisine">
                 @include('svgs.logos.sites.logo_cuisine', ['classes' => 'h-40'])
             </a>
-            <a href="" class="flex justify-center items-center flex-1 mx-2 md:m-2 mb-2 estate">
+            <a href="https://estate.loherb.com.tw" class="flex justify-center items-center flex-1 mx-2 md:m-2 mb-2 estate">
                 @include('svgs.logos.sites.logo_estate', ['classes' => 'h-40'])
             </a>
         </div>
@@ -41,25 +49,52 @@
         <p class="text-lg font-sans mt-2">{{ trans('homepage.footer.email') }}</p>
         <p class="text-lg font-sans mt-2">{{ trans('homepage.footer.phone') }}</p>
         <div class="flex justify-center mt-8">
+            {{--<a class="text-white hover:text-gold mx-4"--}}
+               {{--href="">@include('svgs.social.twitter')</a>--}}
+            {{--<a class="text-white hover:text-gold mx-4"--}}
+               {{--href="">@include('svgs.social.linkedin')</a>--}}
             <a class="text-white hover:text-gold mx-4"
-               href="">@include('svgs.social.twitter')</a>
+               href="https://www.facebook.com/LOHERB.TW/">@include('svgs.social.facebook')</a>
             <a class="text-white hover:text-gold mx-4"
-               href="">@include('svgs.social.linkedin')</a>
-            <a class="text-white hover:text-gold mx-4"
-               href="">@include('svgs.social.facebook')</a>
-            <a class="text-white hover:text-gold mx-4"
-               href="">@include('svgs.social.instagram')</a>
+               href="https://www.instagram.com/loherb0301/">@include('svgs.social.instagram')</a>
         </div>
         <div class="flex justify-center mt-8">
-            <a class="font-sans text-white mx-6 uppercase no-underline hover:text-gold" href="">{{ trans('homepage.nav.villa') }}</a>
-            <a class="font-sans text-white mx-6 uppercase no-underline hover:text-gold" href="">{{ trans('homepage.nav.cuisine') }}</a>
-            <a class="font-sans text-white mx-6 uppercase no-underline hover:text-gold" href="">{{ trans('homepage.nav.estate') }}</a>
+            <a class="font-sans text-white mx-6 uppercase no-underline hover:text-gold" href="https://villa.loherb.com.tw">{{ trans('homepage.nav.villa') }}</a>
+            <a class="font-sans text-white mx-6 uppercase no-underline hover:text-gold" href="https://cuisine.loherb.com.tw">{{ trans('homepage.nav.cuisine') }}</a>
+            <a class="font-sans text-white mx-6 uppercase no-underline hover:text-gold" href="https://estate.loherb.com.tw">{{ trans('homepage.nav.estate') }}</a>
         </div>
     </footer>
 <nav class="absolute pin-t w-full h-12 flex justify-center items-center z-40 main-nav font-sans bg-black-opq">
-    <a class="no-underline hover:text-gold text-base md:text-lg tracking-wide text-white uppercase ml-4 md:ml-6 pr-4 md:pr-6 border-r border-w" href="">{{ trans('homepage.nav.villa') }}</a>
-    <a class="no-underline hover:text-gold text-base md:text-lg tracking-wide text-white uppercase ml-4 md:ml-6 pr-4 md:pr-6 border-r border-w" href="">{{ trans('homepage.nav.cuisine') }}</a>
-    <a class="no-underline hover:text-gold text-base md:text-lg tracking-wide text-white uppercase ml-4 md:ml-6 pr-4 md:pr-6 border-r border-w md:border-0" href="">{{ trans('homepage.nav.estate') }}</a>
+    <a class="no-underline hover:text-gold text-base md:text-lg tracking-wide text-white uppercase ml-4 md:ml-6 pr-4 md:pr-6 border-r border-w" href="https://villa.loherb.com.tw">{{ trans('homepage.nav.villa') }}</a>
+    <a class="no-underline hover:text-gold text-base md:text-lg tracking-wide text-white uppercase ml-4 md:ml-6 pr-4 md:pr-6 border-r border-w" href="https://cuisine.loherb.com.tw">{{ trans('homepage.nav.cuisine') }}</a>
+    <a class="no-underline hover:text-gold text-base md:text-lg tracking-wide text-white uppercase ml-4 md:ml-6 pr-4 md:pr-6 border-r border-w md:border-0" href="https://estate.loherb.com.tw">{{ trans('homepage.nav.estate') }}</a>
     <a href="{{ transUrl(request()->path()) }}" class="hover:text-gold text-sm md:text-lg text-white uppercase no-underline pin-r static md:absolute mr-4 ml-4 md:ml-0 md:mr-8">{{ trans('homepage.nav.language') }}</a>
 </nav>
+
+<script type='application/ld+json'>
+{
+  "@context": "http://www.schema.org",
+  "@type": "Corporation",
+  "name": "Loherb Group",
+  "url": "https://loherb.com.tw/",
+  "logo": "https://loherb.com.tw/images/logo.png",
+  "description": "The Loherb Group is a premium lifestyle brand. Our group includes Loherb Villa, luxury hotel accommodation in Yilan, and Loherb Cuisine, which offers a fine dining experience.",
+  "address": {
+		"@type": "PostalAddress",
+		"addressCountry": "Taiwan",
+		"addressLocality": "Yilan",
+		"addressRegion": "Dongshan",
+		"postalCode": "269",
+		"streetAddress": "372 Baofu road",
+		"email": "service@loherb.com.tw",
+		"telephone": "+886-3-959-5685",
+		"name": "Villa Loherb"
+	},
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+886-3-959-5685",
+    "contactType": "customer service"
+  }
+}
+</script>
 @endsection
