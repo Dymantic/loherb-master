@@ -1,5 +1,9 @@
 @extends('base')
 
+@section('title')
+    {{ trans('homepage.meta.title') }}
+@endsection
+
 @section('head')
     @include('ogmeta', [
         'ogImage' => url('/images/main_facebook.jpg'),

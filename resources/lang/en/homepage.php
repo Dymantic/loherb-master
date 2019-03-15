@@ -2,7 +2,7 @@
 
 return [
     'meta' => [
-        'title' => 'Loherb Group - Welcome to the home of taste',
+        'title' => 'Loherb Group - Healthy Living in Taiwan',
         'description' => 'The Loherb Group is a premium lifestyle brand. Our group includes Loherb Villa, luxury hotel accommodation in Yilan, and Loherb Cuisine, which offers a fine dining experience.'
     ],
     'nav' => [
