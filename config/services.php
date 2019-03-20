@@ -40,4 +40,8 @@ return [
         ],
     ],
 
+    'google' => [
+        'analytics' => env('ANALYTICS_ID')
+    ]
+
 ];
