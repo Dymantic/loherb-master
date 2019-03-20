@@ -74,7 +74,9 @@
     <a class="no-underline hover:text-gold text-base md:text-lg tracking-wide text-white uppercase ml-4 md:ml-6 pr-4 md:pr-6 border-r border-w md:border-0" href="https://estate.loherb.com.tw">{{ trans('homepage.nav.estate') }}</a>
     <a href="{{ transUrl(request()->path()) }}" class="hover:text-gold text-sm md:text-lg text-white uppercase no-underline pin-r static md:absolute mr-4 ml-4 md:ml-0 md:mr-8">{{ trans('homepage.nav.language') }}</a>
 </nav>
-
+<div class="fb-customerchat"
+         page_id="{{ config('facebook.page_id') }}" theme_color="#1b1c1b">
+    </div>
 <script type='application/ld+json'>
 {
   "@context": "http://www.schema.org",
@@ -101,4 +103,5 @@
   }
 }
 </script>
+@include('front.partials.facebook-sdk')
 @endsection
