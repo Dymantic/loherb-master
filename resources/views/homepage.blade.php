@@ -79,7 +79,7 @@
     <a href="{{ transUrl(request()->path()) }}" class="hover:text-gold text-sm md:text-lg text-white uppercase no-underline pin-r static md:absolute mr-4 ml-4 md:ml-0 md:mr-8">{{ trans('homepage.nav.language') }}</a>
 </nav>
 <div class="fb-customerchat"
-         page_id="{{ config('facebook.page_id') }}" theme_color="#1b1c1b">
+         page_id="{{ config('facebook.page_id') }}" theme_color="#e49e2a">
     </div>
 <script type='application/ld+json'>
 {
