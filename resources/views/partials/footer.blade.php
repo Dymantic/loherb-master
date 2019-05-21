@@ -21,5 +21,6 @@
         <a class="font-sans text-white mx-6 uppercase no-underline hover:text-gold" href="https://villa.loherb.com.tw">{{ trans('homepage.nav.villa') }}</a>
         <a class="font-sans text-white mx-6 uppercase no-underline hover:text-gold" href="https://cuisine.loherb.com.tw">{{ trans('homepage.nav.cuisine') }}</a>
         <a class="font-sans text-white mx-6 uppercase no-underline hover:text-gold" href="https://estate.loherb.com.tw">{{ trans('homepage.nav.estate') }}</a>
+        <a class="font-sans text-white mx-6 uppercase no-underline hover:text-gold" href="https://patisserie.loherb.com.tw">{{ trans('homepage.nav.patisserie') }}</a>
     </div>
 </footer>
