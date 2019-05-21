@@ -16,7 +16,7 @@
   }
 }
 
-.villa::before, .cuisine::before, .estate::before{
+.villa::before, .cuisine::before, .estate::before, .patisserie::before{
   content: "";
   display: inline-block;
   height: 0;
@@ -42,6 +42,12 @@
   transition: .3s;
 }
 
+.patisserie {
+  background-image: url(../images/patisserie_banner.jpg);
+  background-size: cover;
+  transition: .3s;
+}
+
 .sites:hover a {
   opacity: .75;
 }
@@ -55,6 +61,10 @@
 }
 
 .sites a.estate:hover {
+  opacity: 1;
+}
+
+.sites a.patisserie:hover {
   opacity: 1;
 }
 
@@ -85,7 +95,7 @@
 
 .main-nav:lang(zh) > a {
   @media screen and (max-width: 576px) {
-    font-size: 80%;
+    font-size: 74%;
   }
 }
 
