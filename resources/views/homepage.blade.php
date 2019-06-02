@@ -21,16 +21,16 @@
     </section>
     <section>
         <div class="flex flex-col md:flex-row sites">
-            <a href="https://villa.loherb.com.tw" class="flex justify-center items-center flex-1 mx-2 md:m-2 villa">
+            <a href="https://villa.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 villa">
                 @include('svgs.logos.sites.logo_villa', ['classes' => 'h-40'])
             </a>
-            <a href="https://cuisine.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-0 cuisine">
+            <a href="https://cuisine.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 cuisine">
                 @include('svgs.logos.sites.logo_cuisine', ['classes' => 'h-40'])
             </a>
-            <a href="https://estate.loherb.com.tw" class="flex justify-center items-center flex-1 mx-2 md:m-2 mb-2 estate">
+            <a href="https://estate.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 mb-2 estate">
                 @include('svgs.logos.sites.logo_estate', ['classes' => 'h-40'])
             </a>
-            <a href="https://patisserie.loherb.com.tw" class="flex justify-center items-center flex-1 mx-2 md:m-2 mb-2 patisserie">
+            <a href="https://patisserie.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 mb-2 patisserie">
                 @include('svgs.logos.sites.patisserie', ['classes' => 'h-40'])
             </a>
         </div>
