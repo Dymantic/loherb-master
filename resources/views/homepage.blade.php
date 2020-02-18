@@ -21,17 +21,29 @@
     </section>
     <section>
         <div class="flex flex-col md:flex-row sites">
-            <a href="https://villa.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 villa">
-                @include('svgs.logos.sites.logo_villa', ['classes' => 'h-40'])
+            <a title="{{ trans("homepage.nav.villa") }}" href="https://villa.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 villa no-underline">
+                <div class="text-center">
+                    @include('svgs.logos.simple', ['classes' => 'h-12 text-white'])
+                    <p class="mt-4 font-sans text-white uppercase tracking-super text-xl">{{ trans('homepage.nav.villa') }}</p>
+                </div>
             </a>
-            <a href="https://cuisine.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 cuisine">
-                @include('svgs.logos.sites.logo_cuisine', ['classes' => 'h-40'])
+            <a title="{{ trans("homepage.nav.cuisine") }}" href="https://cuisine.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 cuisine no-underline">
+                <div class="text-center">
+                    @include('svgs.logos.simple', ['classes' => 'h-12 text-white'])
+                    <p class="mt-4 font-sans text-white uppercase tracking-super text-xl">{{ trans('homepage.nav.cuisine') }}</p>
+                </div>
             </a>
-            <a href="https://estate.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 mb-2 estate">
-                @include('svgs.logos.sites.logo_estate', ['classes' => 'h-40'])
+            <a title="{{ trans("homepage.nav.estate") }}" href="https://estate.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 mb-2 estate no-underline">
+                <div class="text-center">
+                    @include('svgs.logos.simple', ['classes' => 'h-12 text-white'])
+                    <p class="mt-4 font-sans text-white uppercase tracking-super text-xl">{{ trans('homepage.nav.estate') }}</p>
+                </div>
             </a>
-            <a href="https://patisserie.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 mb-2 patisserie">
-                @include('svgs.logos.sites.patisserie', ['classes' => 'h-40'])
+            <a title="{{ trans("homepage.nav.patisserie") }}" href="https://patisserie.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 mb-2 patisserie no-underline">
+                <div class="text-center">
+                    @include('svgs.logos.simple', ['classes' => 'h-12 text-white'])
+                    <p class="mt-4 font-sans text-white uppercase tracking-super text-xl">{{ trans('homepage.nav.patisserie') }}</p>
+                </div>
             </a>
         </div>
 
