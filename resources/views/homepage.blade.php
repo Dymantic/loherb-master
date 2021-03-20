@@ -16,33 +16,33 @@
 @include('partials.banner')
     <section class="py-20 px-8 flex flex-col items-center">
         @include('svgs.logos.leaf')
-        <p class="mt-20 body-font text-lg text-center max-w-md my-8 mx-auto">{{ trans('homepage.intro.part_one') }}</p>
-        <p class="body-font text-lg text-center max-w-md my-8 mx-auto">{{ trans('homepage.intro.part_two') }}</p>
+        <p class="mt-20 body-font text-lg text-center max-w-xl my-8 mx-auto">{{ trans('homepage.intro.part_one') }}</p>
+        <p class="body-font text-lg text-center max-w-xl my-8 mx-auto">{{ trans('homepage.intro.part_two') }}</p>
     </section>
     <section>
         <div class="flex flex-col md:flex-row sites">
             <a title="{{ trans("homepage.nav.villa") }}" href="https://villa.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 villa no-underline">
-                <div class="text-center">
+                <div class="flex flex-col items-center">
                     @include('svgs.logos.simple', ['classes' => 'h-12 text-white'])
-                    <p class="mt-4 font-sans text-white uppercase tracking-super text-xl">{{ trans('homepage.nav.villa') }}</p>
+                    <p class="mt-4 type-a1 text-white uppercase tracking-widest">{{ trans('homepage.nav.villa') }}</p>
                 </div>
             </a>
             <a title="{{ trans("homepage.nav.cuisine") }}" href="https://cuisine.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 cuisine no-underline">
-                <div class="text-center">
+                <div class="flex flex-col items-center">
                     @include('svgs.logos.simple', ['classes' => 'h-12 text-white'])
-                    <p class="mt-4 font-sans text-white uppercase tracking-super text-xl">{{ trans('homepage.nav.cuisine') }}</p>
+                    <p class="mt-4 type-a1 text-white uppercase tracking-widest">{{ trans('homepage.nav.cuisine') }}</p>
                 </div>
             </a>
             <a title="{{ trans("homepage.nav.estate") }}" href="https://estate.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 mb-2 estate no-underline">
-                <div class="text-center">
+                <div class="flex flex-col items-center">
                     @include('svgs.logos.simple', ['classes' => 'h-12 text-white'])
-                    <p class="mt-4 font-sans text-white uppercase tracking-super text-xl">{{ trans('homepage.nav.estate') }}</p>
+                    <p class="mt-4 type-a1 text-white uppercase tracking-widest">{{ trans('homepage.nav.estate') }}</p>
                 </div>
             </a>
             <a title="{{ trans("homepage.nav.patisserie") }}" href="https://patisserie.loherb.com.tw" class="flex justify-center items-center flex-1 m-2 md:mx-1 mb-2 patisserie no-underline">
-                <div class="text-center">
+                <div class="flex flex-col items-center">
                     @include('svgs.logos.simple', ['classes' => 'h-12 text-white'])
-                    <p class="mt-4 font-sans text-white uppercase tracking-super text-xl">{{ trans('homepage.nav.patisserie') }}</p>
+                    <p class="mt-4 type-a1 text-white uppercase tracking-widest">{{ trans('homepage.nav.patisserie') }}</p>
                 </div>
             </a>
         </div>

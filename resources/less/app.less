@@ -5,7 +5,9 @@
   font-weight: bold;
 }
 
-@tailwind preflight;
+@tailwind base;
+
+@import "type";
 
 .banner {
   height: calc(100vh - 10rem);
@@ -69,11 +71,11 @@
 }
 
 .body-font {
-  @apply .font-serif;
+  @apply font-serif;
 }
 
 .body-font:lang(zh) {
-  @apply .font-sans .font-thin;
+  @apply font-sans font-thin;
 }
 
 .banner .banner-controls {

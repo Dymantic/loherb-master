@@ -37,7 +37,7 @@ export class SuperHero {
         slide.style.width = '100%';
         slide.style.height = '100%';
         slide.style.objectFit = "cover";
-        slide.className = 'absolute pin';
+        slide.className = 'absolute inset-0';
         slide.setAttribute('data-src', source);
 
         return slide;
