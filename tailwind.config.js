@@ -5,27 +5,20 @@ module.exports = {
         "./resources/**/*.html",
         "./resources/**/*.vue",
         "./resources/**/*.blade.php",
+        "./resources/js/Usher.js",
     ],
+    mode: 'jit',
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
             colors: {
-                black: "#1b1c1b",
-                "black-opq": "rgba(0,0,0,.8)",
-                'charcoal': '#514A49',
-                'charcoal-light': '#A69491',
-
+                'black': '#22292f',
                 'purple': '#5d2b46',
                 'purple-soft': '#902343',
                 'hover-purple': '#902343',
                 'navy': '#22323f',
                 'off-white': '#f7f4f2',
                 'pinky-grey': '#eceaed',
-                'cream-light': '#fef4f2',
-                'brown-dark': '#917661',
-                'brown-light': '#eac49f',
-                'gold': '#e49e2a',
-                'opaque': 'rgba(255,255,255,.8)',
                 'green-main': '#084137',
                 'hover-green': '#346c62',
                 'green-soft': '#daede7',
@@ -33,7 +26,13 @@ module.exports = {
                 'green-mid': '#abd5c7',
                 'ivory': '#FDFDFA',
                 'cream-dark': '#d7c7ba',
+                'cream-light': '#fef4f2',
+                'brown-dark': '#917661',
                 'chocolate': '#554539',
+                'brown-light': '#eac49f',
+                'gold': '#e49e2a',
+                'opaque': 'rgba(254,244,242,.9)',
+
                 'warning': '#cc1f1a',
             },
             spacing: {
@@ -45,7 +44,12 @@ module.exports = {
                 '120w': '120vw',
             },
             fontSize: {
+                "lg" : '1.25rem',
+                '3xl': '3rem',
                 '4xl': '2.125rem',
+                '5xl': '3rem',
+                '6xl': '3.5rem',
+                '7xl': '4rem',
             },
             fontFamily: {
                 display: [
@@ -80,9 +84,15 @@ module.exports = {
                     'Helvetica Neue',
                     'sans-serif',
                 ],
+                transat: [
+                    'transat-bold',
+                    'Noto Sans TC',
+                    'system-ui',
+                    'san-serif',
+                ],
                 serif: [
                     'Noto Serif TC',
-                    'adobe-caslon-pro',
+                    'bodoni-urw',
                     'Constantia',
                     'Lucida',
                     'Lucida Bright',

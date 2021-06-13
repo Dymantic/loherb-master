@@ -1,106 +1,122 @@
 @font-face {
-  font-family: "transat-bold";
-  src: url(../fonts/transat_bold-webfont.woff), url(../fonts/transat_bold-webfont.woff2);
-  font-style: normal;
-  font-weight: bold;
+    font-family: "transat-bold";
+    src: url(../fonts/transat_bold-webfont.woff),
+    url(../fonts/transat_bold-webfont.woff2);
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "transat-bold";
+    src: url(../fonts/transat_standard-webfont.woff),
+    url(../fonts/transat_standard-webfont.woff2),
+    url(../fonts/transat_standard-webfont.ttf);
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
 }
 
 @tailwind base;
 
-@import "type";
+@layer utilities {
+    @import "type";
 
-.banner {
-  height: calc(100vh - 10rem);
-  background-color: #0f2f21;
+    .banner {
+        height: calc(100vh - 10rem);
+        background-color: #0f2f21;
 
-  @media screen and (max-width: 576px) {
-    height: calc(100vh - 4rem);
-  }
+        @media screen and (max-width: 576px) {
+            height: calc(100vh - 4rem);
+        }
+    }
+
+    .villa::before, .cuisine::before, .estate::before, .patisserie::before{
+        content: "";
+        display: inline-block;
+        height: 0;
+        width: 1px;
+        padding-bottom: 100%;
+    }
+
+    .villa {
+        background-image: url(../images/villa_banner.jpg);
+        background-size: cover;
+        transition: .3s;
+    }
+
+    .cuisine {
+        background-image: url(../images/cuisine_banner.jpg);
+        background-size: cover;
+        transition: .3s;
+    }
+
+    .estate {
+        background-image: url(../images/estate_banner.jpg);
+        background-size: cover;
+        transition: .3s;
+    }
+
+    .patisserie {
+        background-image: url(../images/patisserie_banner.jpg);
+        background-size: cover;
+        transition: .3s;
+    }
+
+    .sites:hover a {
+        opacity: .75;
+    }
+
+    .sites a.villa:hover {
+        opacity: 1;
+    }
+
+    .sites a.cuisine:hover {
+        opacity: 1;
+    }
+
+    .sites a.estate:hover {
+        opacity: 1;
+    }
+
+    .sites a.patisserie:hover {
+        opacity: 1;
+    }
+
+    .body-font {
+    @apply font-serif;
+    }
+
+    .body-font:lang(zh) {
+    @apply font-sans font-thin;
+    }
+
+    .banner .banner-controls {
+        transition: .3s;
+        transform: translateY(100px);
+    }
+
+    .banner.ready .banner-controls {
+        transform: translateY(0);
+    }
+
+    .banner svg, .banner h1 {
+        transition: 1s;
+    }
+
+    .banner.active svg, .banner.active h1 {
+        opacity: 0;
+    }
+
+    .main-nav:lang(zh) > a {
+        @media screen and (max-width: 576px) {
+            font-size: 75%;
+            border-right: none;
+            margin-left: 0.5rem;
+        }
+    }
+
 }
 
-.villa::before, .cuisine::before, .estate::before, .patisserie::before{
-  content: "";
-  display: inline-block;
-  height: 0;
-  width: 1px;
-  padding-bottom: 100%;
-}
-
-.villa {
-  background-image: url(../images/villa_banner.jpg);
-  background-size: cover;
-  transition: .3s;
-}
-
-.cuisine {
-  background-image: url(../images/cuisine_banner.jpg);
-  background-size: cover;
-  transition: .3s;
-}
-
-.estate {
-  background-image: url(../images/estate_banner.jpg);
-  background-size: cover;
-  transition: .3s;
-}
-
-.patisserie {
-  background-image: url(../images/patisserie_banner.jpg);
-  background-size: cover;
-  transition: .3s;
-}
-
-.sites:hover a {
-  opacity: .75;
-}
-
-.sites a.villa:hover {
-  opacity: 1;
-}
-
-.sites a.cuisine:hover {
-  opacity: 1;
-}
-
-.sites a.estate:hover {
-  opacity: 1;
-}
-
-.sites a.patisserie:hover {
-  opacity: 1;
-}
-
-.body-font {
-  @apply font-serif;
-}
-
-.body-font:lang(zh) {
-  @apply font-sans font-thin;
-}
-
-.banner .banner-controls {
-  transition: .3s;
-  transform: translateY(100px);
-}
-
-.banner.ready .banner-controls {
-  transform: translateY(0);
-}
-
-.banner svg, .banner h1 {
-  transition: 1s;
-}
-
-.banner.active svg, .banner.active h1 {
-  opacity: 0;
-}
-
-.main-nav:lang(zh) > a {
-  @media screen and (max-width: 576px) {
-    font-size: 75%;
-    border-right: none;
-    margin-left: 0.5rem;
-  }
-}
 
 @tailwind utilities;
