@@ -18,7 +18,7 @@ return [
         'part_two' => '歡迎大家一同體驗日光生活，感受健康的美好。'
     ],
     'footer' => [
-        'address' => '(269)宜蘭縣冬山鄉寶福路372號',
+        'address' => '105 臺北市松山區光復北路105號5樓',
         'email' => 'service@loherb.com.tw',
         'phone' => '+886-3-959-5685'
     ]

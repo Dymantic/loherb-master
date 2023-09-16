@@ -59,7 +59,7 @@ export class SuperHero {
            }
         });
 
-        this.current = 4;
+        this.current = 3;
         this.updateCount();
         document.querySelector('.banner').classList.add('ready');
 
@@ -152,6 +152,6 @@ export class SuperHero {
     }
 
     updateCount() {
-        this.showPosition.innerHTML = this.current === 4 ? '1' : this.current + 2;
+        this.showPosition.innerHTML = this.current === 3 ? '1' : this.current + 2;
     }
 }
